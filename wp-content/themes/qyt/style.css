@@ -1,0 +1,52 @@
+/*
+Theme Name: qpp
+Theme URI: https://qiuyt.com/
+Author: qpp
+Author URI: https://qiuyt.com/
+Description: This theme is clean, blog-focused, and designed for clarity. Qpp's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@media screen and (min-width: 980px) {
+	#menuMain{
+		width: 980px;
+	}
+}
+body{background: #2e2e2e;}
+header{
+    position: absolute; width: 100%; text-align: center; z-index: 3; clear: both; display: block; background-color: #143352; height: 42px; border-top: 2px solid rgba(92, 153, 214, 0.5); border-bottom: 2px solid rgba(15, 38, 61, 0.5); box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6); -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 0 #000;
+
+    #menuMain{
+		margin: 0 auto; text-align: left;
+
+		.siteLogo{
+			color: white; line-height: 35px;
+
+			.site-title{font-size: 20px;}
+			.site-description{font-size: 12px;}
+			&:hover{color: #e2e2b1; text-decoration: none;}
+		}
+
+		.menuUL{
+			list-style: none; margin: 0; padding: 0;
+
+			.menuLI{
+				display: inline-block; float: left;
+
+				.menuA{
+					display: block; margin: 0; padding: 0 15px; line-height: 38px; color: white; border: 2px solid transparent; border-width: 0 2px; text-decoration: none;
+
+					&:hover{border: 2px solid #140805; border-left-color: #3d170f; border-right-color: #3d170f; border-bottom: 0; border-top: 0; background-color: #521f14;}
+				}
+			}
+		}
+	}
+}
+
