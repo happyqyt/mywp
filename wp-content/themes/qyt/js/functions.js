@@ -12,6 +12,7 @@
 		$body          = $( document.body );
 		$window        = $( window );
 		
+		
 	} );
 
 } )( jQuery );

@@ -19,34 +19,55 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		width: 980px;
 	}
 }
-body{background: #2e2e2e;}
-header{
-    position: absolute; width: 100%; text-align: center; z-index: 3; clear: both; display: block; background-color: #143352; height: 42px; border-top: 2px solid rgba(92, 153, 214, 0.5); border-bottom: 2px solid rgba(15, 38, 61, 0.5); box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6); -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 0 #000;
+body{background: #EEEEEE;}
+.animation{transition:all linear .2s;}
+.boxShadow (@color) {box-shadow: 0 0 8px @color; -moz-box-shadow: 0 0 8px @color; -webkit-box-shadow: 0 0 8px @color; -moz-box-shadow: 0 0 8px @color;}
+.textShadow (@color) {text-shadow: 0 0 4px @color; -moz-text-shadow: 0 0 4px @color; -webkit-text-shadow: 0 0 4px @color; -moz-text-shadow: 0 0 4px @color;}
+
+header.siteHeader{
+    position: fixed; width: 100%; text-align: center; z-index: 3; clear: both; display: block; height: 50px; opacity: .9; background-color: #064954; .boxShadow(#000);
 
     #menuMain{
 		margin: 0 auto; text-align: left;
 
 		.siteLogo{
-			color: white; line-height: 35px;
+			color: white; line-height: 47px; .animation;
 
-			.site-title{font-size: 20px;}
+			.site-title{font-size: 20px; .textShadow(#fff);}
 			.site-description{font-size: 12px;}
 			&:hover{color: #e2e2b1; text-decoration: none;}
 		}
 
-		.menuUL{
+		#menuDiv ul{
 			list-style: none; margin: 0; padding: 0;
 
-			.menuLI{
-				display: inline-block; float: left;
+			li{
+				display: inline-block; float: left; position: relative; overflow: hidden; .animation;
 
-				.menuA{
-					display: block; margin: 0; padding: 0 15px; line-height: 38px; color: white; border: 2px solid transparent; border-width: 0 2px; text-decoration: none;
+				&:hover{
+					overflow: visible; background-color:#832E36;
 
-					&:hover{border: 2px solid #140805; border-left-color: #3d170f; border-right-color: #3d170f; border-bottom: 0; border-top: 0; background-color: #521f14;}
+					.sub-menu{opacity: 1; background-color:#832E36; .boxShadow(#832E36);}
+				}
+				&.current-menu-item{background-color:#832E36;}
+				&.current-menu-parent{background-color:#832E36;}
+
+				a{display: block; margin: 0; padding: 0 15px; line-height: 50px; color: white; text-decoration: none; font-size: 18px;}
+				.sub-menu{
+					position: absolute; top: 50px; left: 0; color: white; opacity: 0; .animation;
+
+					li{
+						display: block; width: 100%; height: 40px; .animation;
+
+						&:hover{background:#3C3C3C;}
+						&.current-menu-item{background-color:#3C3C3C;}
+
+						a{display: block; width: 100%; line-height: 40px; border: 0; font-size: 14px;}
+					}
 				}
 			}
 		}
 	}
 }
 
+main{display: block; width: 100%; text-align: center; padding-top: 50px;}
